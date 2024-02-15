@@ -1,0 +1,11 @@
+extend type Mutation
+  @exposeField(
+    field: "addStar"
+    path: "starrable"
+    field_map: [{ from: "id", to: "input.starrableId" }]
+  )
+  @exposeField(
+    field: "removeStar"
+    path: "starrable"
+    field_map: [{ from: "id", to: "input.starrableId" }]
+  )
