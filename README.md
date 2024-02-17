@@ -15,5 +15,11 @@ yarn run iso --watch
 ```
 
 :::note
-A regression was introduced recently, so `yarn run iso` actually generates incorrect code at the moment. This should be fixed soon. In the mean time, you can manually update `/demo-2024-01-22/src/components/__isograph/Repository/Repository/reader.ts` to import `"../../Repository/removeStar/reader"` and `"../../Repository/addStar/reader"` instead of `"../../Starrable/addStar/reader"` and `"../../Starrable/removeStar/reader"`.
+You should use the `@main` versions of the packages for this repo, as `v0.1.0` (i.e. the version you install with `yarn install @isograph/react`, etc.) has a regression, and generates incorrect artifacts. For this demo, you should:
+
+```sh
+yarn install @isograph/react@main
+yarn install -D @isograph/compiler@main @isograph/babel-plugin@main
+```
+
 :::
